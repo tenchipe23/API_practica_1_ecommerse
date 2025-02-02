@@ -22,6 +22,8 @@ const registerUser = async (req, res) => {
   if (user) {
     res.status(201).json({
       _id: user._id,
+      succes: true,
+      message: "Usuario registrado exitosamente",
       name: user.name,
       email: user.email,
       token: generateToken(user._id),
